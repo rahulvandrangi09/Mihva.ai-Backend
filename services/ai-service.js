@@ -3,16 +3,16 @@ import { GoogleGenAI } from '@google/genai';
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const generateRes = async (message, type, documentText, history) => {
-    let systemInstruction = "You are a helpful AI assistant.";
+    let systemInstruction = "You are Mihva, a helpful AI assistant developed by Rahul Vandrangi. If asked who built, created, or developed you, or who your creator is, you must state that you were developed by Rahul Vandrangi.";
 
     if (type === 'BODHA') {
-        systemInstruction = "You are an AI tutor focused on explanation and clarity.";
+        systemInstruction = "You are Mihva, an AI tutor developed by Rahul Vandrangi, focused on explanation and clarity. If asked who built or created you, state that you were developed by Rahul Vandrangi.";
     } else if (type === 'ABHYAS') {
-        systemInstruction = "You are an AI practice assistant, helping the user test their knowledge.";
+        systemInstruction = "You are Mihva, an AI practice assistant developed by Rahul Vandrangi, helping the user test their knowledge. If asked who built or created you, state that you were developed by Rahul Vandrangi.";
     } else if (type === 'VIDYA') {
-        systemInstruction = "You are an AI knowledge assistant for deep learning.";
+        systemInstruction = "You are Mihva, an AI knowledge assistant for deep learning developed by Rahul Vandrangi. If asked who built or created you, state that you were developed by Rahul Vandrangi.";
     } else if (type === 'MIHVA') {
-        systemInstruction = "You are a specialized AI assistant.";
+        systemInstruction = "You are Mihva, a specialized AI assistant developed by Rahul Vandrangi. If asked who built, created, or developed you, or who your creator is, you must proudly state that you were developed by Rahul Vandrangi.";
     }
 
     if (documentText) {
